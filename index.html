@@ -919,9 +919,26 @@
 </footer>
 
 <script>
+  var LEAD_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxVr7HPwNhLOWjCKPmdSq80hWfBXM-4qyLCcHEs3qDyoSQSq2ItYig6bPksQf8mTk_ZGA/exec';
+
   function leadSubmit(form){
     var wrap = form.closest('section') || form.parentElement;
     var thanks = wrap.querySelector('.thanks-msg');
+    var nameEl = form.querySelector('input[type="text"]');
+    var phoneEl = form.querySelector('input[type="tel"]');
+    var emailEl = form.querySelector('input[type="email"]');
+    var payload = {
+      name: nameEl ? nameEl.value : '',
+      phone: phoneEl ? phoneEl.value : '',
+      email: emailEl ? emailEl.value : '',
+      source: window.location.href
+    };
+    fetch(LEAD_SHEET_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'text/plain;charset=utf-8'},
+      body: JSON.stringify(payload)
+    }).catch(function(){ /* best-effort: still show thank-you even if the network call fails */ });
     form.classList.add('hide');
     if(thanks){ thanks.classList.add('show'); }
     return false;
