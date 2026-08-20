@@ -1015,7 +1015,7 @@
       if(d < minDist){ minDist = d; currentIndex = i; }
     });
     var nextIndex = Math.max(0, Math.min(slides.length - 1, currentIndex + dir));
-    slides[nextIndex].scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
+    slides[nextIndex].scrollIntoView({behavior:'instant', inline:'center', block:'nearest'});
   }
 
   (function(){
