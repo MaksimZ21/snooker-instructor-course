@@ -494,6 +494,15 @@
     display:flex; gap:2px; height:10px; border-radius:6px; overflow:hidden; margin-top:14px;
   }
   .hours-bar span{display:block; height:100%;}
+  .hours-legend{
+    display:flex; flex-wrap:wrap; gap:10px 20px;
+    margin-top:14px; padding-bottom:16px;
+  }
+  .legend-item{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:.85rem; color:var(--ink-dim);
+  }
+  .legend-dot{width:10px; height:10px; border-radius:50%; flex:none;}
 
   /* ---- final CTA ---- */
   .final-cta{
@@ -836,20 +845,20 @@
       <div class="glass details-panel">
         <div class="details-grid">
           <div class="detail-item reveal">
-            <div class="label">תאריך פתיחה</div>
-            <div class="value">27.11.2026 <small>יום שישי, מפגש פתיחה</small></div>
+            <div class="label">משך הקורס</div>
+            <div class="value">27.11.2026–26.02.2027 <small>מחזור 3</small></div>
           </div>
           <div class="detail-item reveal">
-            <div class="label">תאריך סיום</div>
-            <div class="value">26.02.2027 <small>מבחן מעשי מסכם</small></div>
+            <div class="label">מיקום לימודי תיאוריה</div>
+            <div class="value">קמפוס וינגייט <small>ימי חמישי, 17:00–20:15</small></div>
           </div>
           <div class="detail-item reveal">
-            <div class="label">מיקום ופורמט</div>
-            <div class="value">זום + וינגייט <small>תיאוריה בזום, מעשי פרונטלי</small></div>
+            <div class="label">מיקום לימודי מעשי</div>
+            <div class="value">האקדמיה למצוינות 147 <small>אימון ותרגול מעשי בשולחן</small></div>
           </div>
           <div class="detail-item reveal">
-            <div class="label">שעות תיאוריה</div>
-            <div class="value">17:00–20:15 <small>ימי חמישי, בזום</small></div>
+            <div class="label">לימודי מדעי הספורט</div>
+            <div class="value">17:00–20:00 <small>ימי שלישי</small></div>
           </div>
           <div class="detail-item reveal">
             <div class="label">תנאי קבלה</div>
@@ -863,11 +872,18 @@
         <div style="padding:22px 22px 6px;">
           <div class="label" style="font-size:.78rem;color:var(--ink-faint);margin-bottom:8px;">התפלגות 163 שעות הלימוד</div>
           <div class="hours-bar">
-            <span style="background:var(--gold); width:17.2%" title="תיאוריה מקצועית 28 שעות"></span>
-            <span style="background:var(--green-ball); width:22.7%" title="מעשי 37 שעות"></span>
-            <span style="background:var(--blue-ball); width:30.7%" title="מדעי הספורט 50 שעות"></span>
-            <span style="background:var(--red-ball); width:17.2%" title="עזרה ראשונה 28 שעות"></span>
-            <span style="background:#7a4c2e; width:12.2%" title="סטאז' 20 שעות"></span>
+            <span style="background:var(--gold); width:17.2%"></span>
+            <span style="background:var(--green-ball); width:22.7%"></span>
+            <span style="background:var(--blue-ball); width:30.7%"></span>
+            <span style="background:var(--red-ball); width:17.2%"></span>
+            <span style="background:#7a4c2e; width:12.2%"></span>
+          </div>
+          <div class="hours-legend">
+            <span class="legend-item"><span class="legend-dot" style="background:var(--gold)"></span>תיאוריה מקצועית — 28 שעות</span>
+            <span class="legend-item"><span class="legend-dot" style="background:var(--green-ball)"></span>מעשי — 37 שעות</span>
+            <span class="legend-item"><span class="legend-dot" style="background:var(--blue-ball)"></span>מדעי הספורט — 50 שעות</span>
+            <span class="legend-item"><span class="legend-dot" style="background:var(--red-ball)"></span>עזרה ראשונה — 28 שעות</span>
+            <span class="legend-item"><span class="legend-dot" style="background:#7a4c2e"></span>סטאז' — 20 שעות</span>
           </div>
         </div>
       </div>
