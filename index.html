@@ -30,11 +30,11 @@
 
   :root{
     /* palette shifted toward the Levinsky-Wingate academic center's brand purple (#2c0089, sampled from their mark) */
-    --felt-950:#150a34;
-    --felt-900:#20103f;
-    --felt-800:#3d1a7a;
-    --baize-700:#6b2fd4;
-    --blue-800:#33009e;
+    --felt-950:#120830;
+    --felt-900:#1c0e42;
+    --felt-800:#451c8c;
+    --baize-700:#7d35f0;
+    --blue-800:#3d00b8;
     --ink:#f6fbf8;
     --ink-dim:#c9dcd4;
     --ink-faint:#93aca2;
@@ -75,10 +75,10 @@
   .glow-layer{
     position:fixed; inset:0; z-index:0; pointer-events:none;
     background:
-      radial-gradient(60vw 55vh at 82% -6%, rgba(240,193,95,.28), transparent 62%),
-      radial-gradient(70vw 65vh at 10% 12%, rgba(107,47,212,.75), transparent 60%),
-      radial-gradient(55vw 60vh at 92% 100%, rgba(51,0,158,.8), transparent 62%),
-      radial-gradient(45vw 50vh at 5% 92%, rgba(140,50,220,.55), transparent 60%);
+      radial-gradient(60vw 55vh at 82% -6%, rgba(240,193,95,.3), transparent 62%),
+      radial-gradient(70vw 65vh at 10% 12%, rgba(125,53,240,.8), transparent 60%),
+      radial-gradient(55vw 60vh at 92% 100%, rgba(61,0,184,.85), transparent 62%),
+      radial-gradient(45vw 50vh at 5% 92%, rgba(160,60,245,.6), transparent 60%);
   }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto;}
@@ -174,7 +174,7 @@
     display:flex; align-items:center; gap:12px;
   }
   .header-logo{
-    height:200px; width:auto; max-width:560px; object-fit:contain; flex:none;
+    height:225px; width:auto; max-width:600px; object-fit:contain; flex:none;
     filter:drop-shadow(0 10px 20px rgba(0,0,0,.55));
   }
   .footer-logo{height:84px; width:auto;}
@@ -611,7 +611,7 @@
 
   /* ================= RESPONSIVE ================= */
   @media (max-width:900px){
-    .header-logo{height:140px;}
+    .header-logo{height:155px;}
     .hero-grid{grid-template-columns:1fr;}
     .lead-card{position:static;}
     .ebsa-achievements{grid-template-columns:1fr;}
@@ -635,7 +635,7 @@
     .feature-panel .text-side{padding:30px 24px;}
     .trust-float{height:78px; padding:12px 20px; border-radius:14px;}
     .trust-float img{max-width:150px;}
-    .header-logo{height:90px;}
+    .header-logo{height:100px;}
     .carousel-arrow{display:none;}
     .carousel-slide{width:min(220px, 68vw);}
   }
